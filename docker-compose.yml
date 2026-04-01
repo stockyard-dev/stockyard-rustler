@@ -1,0 +1,8 @@
+services:
+  rustler:
+    image: ghcr.io/stockyard-dev/stockyard-rustler:latest
+    ports: ["8980:8980"]
+    volumes: [rustler-data:/data]
+    restart: unless-stopped
+volumes:
+  rustler-data:
